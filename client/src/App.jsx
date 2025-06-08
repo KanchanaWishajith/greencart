@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/Footer';
 import AllProducts from './pages/AllProducts';
+import ProductCategory from './pages/ProductCategory';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         <Routes>
           <Route path = "/" element={<Home/>} />
           <Route path = "/products" element={<AllProducts/>} />
+          <Route path = "/products/:category" element={<ProductCategory/>} />
         </Routes>
       </div>
     {!isSellerPath && <Footer/>}
