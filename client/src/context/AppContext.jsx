@@ -1,16 +1,68 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { dummyAddress } from "../assets/assets";
+import toast from "react-hot-toast";
 
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
 
+  const currency = import.meta.VITE_CURRENCY;
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [isSeller, setIsSeller] = useState(false);
   const [showUserLogin, setShowUserLogin] = useState(false);
-  const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
 
-  const value = {navigate, user, setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin};
+  const [cartItems, setCartItems] = useState({});
+  
+
+ 
+ // Fetch All Products
+  const fetchProducts = async (axios) => {
+    setProducts(dummyAddress)
+  }
+
+  // Add Prodcut to Cart
+  const addToCart = (itemId)=>{
+    let cartData = structuredClone(cartItems);
+
+    if(cartData[itemId]){
+        cartData[itemId] += 1;
+    }else{
+        cartData[itemId] = 1;
+    }
+    setCartItems(cartData);
+    toast.success("Added to Cart")
+}
+
+  // Update Cart Items Quentity
+    const updateCartItem = (itemId, quantity)=>{
+    let cartData = structuredClone(cartItems);
+    cartData[itemId] = quantity;
+    setCartItems(cartData)
+    toast.success("Cart Updated")
+  }
+
+  // Remove Product from Cart
+  const removeFromCart = (itemId)=>{
+    let cartData = structuredClone(cartItems);
+    if(cartData[itemId]){
+        cartData[itemId] -= 1;
+        if(cartData[itemId] === 0){
+            delete cartData[itemId];
+        }
+    }
+    toast.success("Removed from Cart")
+    setCartItems(cartData)
+}
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+
+  const value = {navigate, user, setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart, cartItems};
 
   return
     <AppContext.Provider value={value}>
