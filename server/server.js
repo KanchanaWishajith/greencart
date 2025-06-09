@@ -5,6 +5,7 @@ import { connect } from 'mongoose';
 import connectDB from './configs/db.js';
 import 'dotenv/config.js';
 import userRouter from './routes/userRoute.js';
+import sellerRouter from './routes/sellerRoute.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -23,6 +24,7 @@ app.use(cors({origin: allowedOrigins, Credentials: true}));
 app.get('/', (req, res) => 
     res.send('Api is running!'));
 app.use('/api/user', userRouter)
+app.use('/api/seller', sellerRouter)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
