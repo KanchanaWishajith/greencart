@@ -1,9 +1,14 @@
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import cors from 'cors';
+import { connect } from 'mongoose';
+import connectDB from './configs/db.js';
+import 'dotenv/config.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+
+await connectDB()
 
 //allow multiple origins
 const allowedOrigins = ['http://localhost:5173']
