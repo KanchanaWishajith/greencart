@@ -77,17 +77,11 @@ To run this project locally:
    npm install
    npm start
    ```
-## 💡 Future Improvements
-
-🧾 Checkout & Payment Integration
-👤 User Profiles & Orders
-🛒 Admin Dashboard for Inventory
-📦 Product Category Filtering
 
 ## ⭐ Contribute & Support
 
 If you like this project:
-🌟 Star this repo
-🛠️ Fork and contribute
-🗨️ Share your feedback
+- 🌟 Star this repo
+- 🛠️ Fork and contribute
+- 🗨️ Share your feedback
 
