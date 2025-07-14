@@ -20,13 +20,12 @@ GreenCart is a full-stack MERN (MongoDB, Express, React, Node.js) application th
 
 ## 🖼️ Screenshots
 
-```markdown
 <img width="1897" height="792" alt="GC 1" src="https://github.com/user-attachments/assets/fcb57fdb-8284-4436-b1e1-8819dd79e249" />
 <img width="1895" height="908" alt="GC 2" src="https://github.com/user-attachments/assets/d4595851-8d0d-45c9-9a2c-384f18070a1c" />
 <img width="1892" height="912" alt="GC 3" src="https://github.com/user-attachments/assets/9b7da27b-4555-4fd0-bff3-4f8f7cb1a417" />
 <img width="1897" height="906" alt="GC 4" src="https://github.com/user-attachments/assets/22b44511-1728-4115-b058-2380fe3ce730" />
 <img width="1895" height="908" alt="GC 5" src="https://github.com/user-attachments/assets/20c01790-6090-4be6-bcdc-90ffcc1319bc" />
-```
+
 ## 🧰 Tech Stack
 
 - Frontend: React.js, Tailwind CSS
