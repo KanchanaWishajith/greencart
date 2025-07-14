@@ -35,6 +35,7 @@ GreenCart is a full-stack MERN (MongoDB, Express, React, Node.js) application th
 - Hosting: Vercel (frontend), Render / Railway / Cyclic (backend)
 
 ## 📁 Folder Structure
+```bash
 greencart/
 ├── client/                 # React frontend
 │   ├── public/
@@ -52,6 +53,7 @@ greencart/
 ├── .gitignore
 ├── README.md
 └── package.json (root for deployment scripts)
+```
 
 ## 🚀 Getting Started
 To run this project locally:
